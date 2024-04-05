@@ -1,0 +1,35 @@
+
+body {
+    background-color:rgba(208, 255, 247, 1); /* Colore di sfondo verde */
+    font-family: 'PP Mori', sans-serif; /* Utilizzo del font PP Mori */
+}
+
+/* Stile per l'intestazione */
+header {
+    background-color: #fD0FFF7; 
+}
+
+/* Stile per il contenuto principale */
+main {
+    padding: 20px;
+}
+
+/* Stile per il piè di pagina */
+footer {
+    background-color: #fD0FFF7; /* Colore di sfondo bianco */
+    padding: 10px;
+    text-align: center;
+}
+
+
+.column {
+    width: 20%; /* Imposta la larghezza delle colonne al 20% della larghezza totale */
+    float: left; /* Posiziona le colonne una accanto all'altra */
+    padding: 10px; /* Aggiunge spazio intorno al contenuto */
+    box-sizing: border-box; /* Assicura che il padding sia incluso nella larghezza totale della colonna */
+}
+
+.column img {
+    max-width: 50%; /* Imposta la larghezza massima dell'immagine al 100% della larghezza del contenitore */
+    height: auto; /* Imposta l'altezza dell'immagine in base al rapporto di aspetto originale */
+}
