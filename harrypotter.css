@@ -1,0 +1,47 @@
+@font-face {font-family: 'HarryPotterFont';
+    src: url('/Users/maria/Desktop/interaction workshop/harry_p.otf') format('opentype');
+}
+
+
+h1 {
+    font-family: 'HarryPotterFont', sans-serif; /* Utilizza il font personalizzato per il titolo */
+    font-size: 36px; /* Dimensione del carattere del titolo */
+    text-align: center;
+}
+body {
+    cursor: url('cursor.png'), auto;
+    /* Fallback */
+    cursor: url('cursor.png'), auto;
+}
+
+.container {
+    max-width: 800px; /* Modifica secondo necessità */
+    margin: 0 auto;
+}
+
+.moment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.moment img {
+    max-width: 50%; /* Occupa metà della larghezza disponibile */
+    height: auto;
+}
+
+.moment .text {
+    width: 50%; /* Occupa l'altra metà della larghezza disponibile */
+    padding: 0 20px; /* Spazio tra l'immagine e il testo */
+}
+
+.moment h2 {
+    text-align: center; /* Centra il titolo */
+}
+
+.moment:nth-child(even) .text {
+    order: -1; /* Inverti l'ordine di visualizzazione per le colonne pari */
+}
+
