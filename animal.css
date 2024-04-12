@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('sfondo.jpg'); /* URL dell'immagine di sfondo */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px; /* Ridotto a 1000px per evitare l'overflow */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container2 {
+  flex: 1;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+  background-color: rgba(224, 242, 241, 0.8); /* Colore di sfondo azzurro chiaro */
+  padding: 20px;
+}
+
+.text {
+  margin-right: 20px;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+}
+
+.foca {
+  position: absolute;
+  width: 200px; /* Imposta la larghezza desiderata */
+  height: auto; /* Altezza automatica per mantenere l'aspetto originale */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeInOut 4s infinite; /* Durata e ciclo dell'animazione */
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0; /* Trasparenza al 0% all'inizio e alla fine */
+  }
+  50% {
+    opacity: 1; /* Trasparenza al 100% al 50% */
+  }
+}
+
+.foca1 {
+  image: url('foca1.png'); /* URL del primo PNG */
+}
+
+.foca2 {
+  image: url('foca2.png'); /* URL del secondo PNG */
+  animation-delay: 2s; /* Ritardo di 2 secondi per iniziare l'animazione del secondo PNG */
+}
