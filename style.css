@@ -1,12 +1,40 @@
 
 body {
-    background-color:rgba(208, 255, 247, 1); /* Colore di sfondo verde */
+    background-color:rgba(196, 255, 191, 1); /* Colore di sfondo verde */
     font-family: 'PP Mori', sans-serif; /* Utilizzo del font PP Mori */
 }
 
 /* Stile per l'intestazione */
+
 header {
-    background-color: #fD0FFF7; 
+    background-color: #096B00; /* Colore di sfondo dell'intestazione */
+    color: #fff; /* Colore del testo */
+    padding: 20px; /* Spaziatura interna */
+}
+
+header h1 {
+    display: inline; /* Imposta il titolo in linea */
+    margin-right: 20px; /* Margine destro per separare il titolo dal menu di navigazione */
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti elenco */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Imposta gli elementi del menu di navigazione in linea */
+}
+
+nav ul li a {
+    color: #fff; /* Colore del testo dei link */
+    text-decoration: none; /* Rimuove il sottolineato dai link */
+    padding: 10px 20px; /* Spaziatura interna dei link */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Cambia il colore di sfondo dei link al passaggio del mouse */
 }
 
 /* Stile per il contenuto principale */

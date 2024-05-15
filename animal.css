@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-image: url('sfondo.jpg'); /* URL dell'immagine di sfondo */
+  background-image: url("sfondo.jpg"); /* URL dell'immagine di sfondo */
   background-size: cover;
   background-position: center;
   margin: 0;
@@ -8,20 +8,19 @@ body {
 }
 
 .container {
-  display: flex;
-  max-width: 1000px; /* Ridotto a 1000px per evitare l'overflow */
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-.container2 {
-  flex: 1;
   padding: 20px;
 }
 
 .content {
   flex: 1;
-  background-color: rgba(224, 242, 241, 0.8); /* Colore di sfondo azzurro chiaro */
+  background-color: rgba(
+    224,
+    242,
+    241,
+    0.8
+  ); /* Colore di sfondo azzurro chiaro */
   padding: 20px;
 }
 
@@ -30,34 +29,47 @@ body {
 }
 
 .image {
-  position: relative;
-  text-align: center;
+  /* Posiziona l'elemento alla destra del testo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .foca {
-  position: absolute;
-  width: 200px; /* Imposta la larghezza desiderata */
+  position: fixed;
+  top: 70%;
+  right: 40px; /* Aumenta la distanza dal bordo destro dello schermo */
+  width: 250px; /* Imposta la larghezza desiderata */
   height: auto; /* Altezza automatica per mantenere l'aspetto originale */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadeInOut 4s infinite; /* Durata e ciclo dell'animazione */
-}
-
-@keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0; /* Trasparenza al 0% all'inizio e alla fine */
-  }
-  50% {
-    opacity: 1; /* Trasparenza al 100% al 50% */
-  }
+  transform: translate(
+    0,
+    -50%
+  ); /* Centra verticalmente l'elemento rispetto alla metà dello schermo */
+  opacity: 0; /* Imposta l'opacità iniziale a 0 */
 }
 
 .foca1 {
-  image: url('foca1.png'); /* URL del primo PNG */
+  opacity: 1; /* Imposta l'opacità della prima immagine a 1 */
+  animation: changeImage 4s infinite; /* Durata e ciclo dell'animazione */
 }
 
 .foca2 {
-  image: url('foca2.png'); /* URL del secondo PNG */
-  animation-delay: 2s; /* Ritardo di 2 secondi per iniziare l'animazione del secondo PNG */
+  opacity: 0; /* Imposta l'opacità della seconda immagine a 0 */
+  animation: changeImage 4s infinite;
+  animation-delay: 2s; /* Ritardo di 2 secondi per iniziare l'animazione della seconda immagine */
+}
+
+@keyframes changeImage {
+  0% {
+    opacity: 1; /* La prima immagine è visibile per i primi 2 secondi */
+  }
+  50% {
+    opacity: 1; /* La prima immagine rimane visibile fino al 50% dell'animazione */
+  }
+  51% {
+    opacity: 0; /* La seconda immagine inizia a essere visibile dal 51% dell'animazione */
+  }
+  100% {
+    opacity: 0; /* La seconda immagine è visibile per gli ultimi 2 secondi */
+  }
 }
